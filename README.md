@@ -33,7 +33,7 @@ Provision an AWS environment with VPC and EC2 and configure an NGINX server with
 
 ## Terraform – Infrastructure Provisioning
 
-**Folder:** [01-terraform](./04-screenshots/terraform/)
+**Folder:** `01-terraform`
 
 Terraform is used to:
 
@@ -56,7 +56,7 @@ Terraform is used to:
 
 ## Ansible – NGINX Configuration
 
-**Folder:** [02-ansible](./04-screenshots/ansible/)
+**Folder:** `02-ansible`
 
 Ansible playbooks are used to:
 
@@ -78,7 +78,7 @@ Ansible playbooks are used to:
 
 ## Packer – AMI Creation
 
-**Folder:** [03-packer](./04-screenshots/packer/)
+**Folder:** `03-packer`
 
 Packer is used to create pre-baked AMIs that include:
 
@@ -99,7 +99,7 @@ Packer is used to create pre-baked AMIs that include:
 
 ## Screenshots – Evidence of Work
 
-**Folder:** [04-screenshots](./04-screenshots/)
+**Folder:** `04-screenshots`
 
 Contains visual proof of:
 
