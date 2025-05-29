@@ -33,7 +33,7 @@ Provision an AWS environment with VPC and EC2 and configure an NGINX server with
 
 ## Terraform – Infrastructure Provisioning
 
-**Folder:** `01-terraform`
+**Folder:** [01-terraform](./04-screenshots/terraform/)
 
 Terraform is used to:
 
@@ -48,7 +48,7 @@ Terraform is used to:
 - `sandbox-values.tfvars` – used for environment-specific values.
 - `terraform.tfstate` – stores the infrastructure state.
 
-#### Refer to `04-screenshots/terraform/` for:
+#### Refer to [04-screenshots/terraform](./04-screenshots/terraform/) for:
 - VPC, Subnets, Route Tables, Internet Gateway
 - EC2 instance and IAM role configurations
 
@@ -56,7 +56,7 @@ Terraform is used to:
 
 ## Ansible – NGINX Configuration
 
-**Folder:** `02-ansible`
+**Folder:** [02-ansible](./04-screenshots/ansible/)
 
 Ansible playbooks are used to:
 
@@ -70,7 +70,7 @@ Ansible playbooks are used to:
 - `playbook.ini` – installs NGINX, SSL, and configures the server
 - `nginx/` – contains role-specific configurations if modularized
 
-#### Refer to `04-screenshots/ansible/` for:
+#### Refer to [04-screenshots/ansible](./04-screenshots/ansible/) for:
 - Ansible playbook execution logs
 - Curl test results over HTTPS
 
@@ -78,7 +78,7 @@ Ansible playbooks are used to:
 
 ## Packer – AMI Creation
 
-**Folder:** `03-packer`
+**Folder:** [03-packer](./04-screenshots/packer/)
 
 Packer is used to create pre-baked AMIs that include:
 
@@ -92,14 +92,14 @@ Packer is used to create pre-baked AMIs that include:
 - `ansible/` – contains the same Ansible roles/playbooks used for provisioning
 - `scripts/` – shell or PowerShell scripts used in Windows image provisioning
 
-#### Refer to `04-screenshots/packer/` for:
+#### Refer to [04-screenshots/packer](./04-screenshots/packer/) for:
 - AMI build process for both Ubuntu and Windows
 
 ---
 
 ## Screenshots – Evidence of Work
 
-**Folder:** `04-screenshots`
+**Folder:** [04-screenshots](./04-screenshots/)
 
 Contains visual proof of:
 
