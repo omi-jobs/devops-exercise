@@ -1,6 +1,6 @@
 # DevOps Exercise – Terraform, Ansible, Packer
 
-This project is a solution to a test that demonstrates proficiency in Infrastructure as Code (IaC) using **Terraform**, configuration management using **Ansible**, and ami creation using **Packer**.
+This repository is a solution to a test that demonstrates proficiency in Infrastructure as Code (IaC) using **Terraform**, configuration management using **Ansible**, and ami creation using **Packer**.
 
 ---
 
