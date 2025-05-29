@@ -1,0 +1,38 @@
+---
+- name: Install NGINX with HTTPS on Windows
+  hosts: all
+  tasks:
+  - name: Install Chocolatey
+    win_shell: |
+      Set-ExecutionPolicy Bypass -Scope Process -Force;
+      [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+      iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+  - name: Install NGINX
+    win_chocolatey:
+      name: nginx
+      state: present
+
+  - name: Copy SSL certificate
+    win_copy:
+      src: ssl/selfsigned.crt
+      dest: C:\tools\nginx\ssl\selfsigned.crt
+
+  - name: Copy SSL key
+    win_copy:
+      src: ssl/selfsigned.key
+      dest: C:\tools\nginx\ssl\selfsigned.key
+
+  - name: Configure nginx.conf with HTTPS
+    win_template:
+      src: nginx.conf.j2
+      dest: C:\tools\nginx\conf\nginx.conf
+
+  - name: Add firewall rule for HTTPS
+    win_firewall_rule:
+      name: "Allow HTTPS"
+      localport: 443
+      action: allow
+      direction: in
+      protocol: TCP
+      state: present

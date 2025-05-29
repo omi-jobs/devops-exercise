@@ -1,0 +1,8 @@
+---
+- name: Install NGINX and OpenSSL
+  apt:
+    name:
+    - nginx
+    - openssl
+    state: present
+    update_cache: yes

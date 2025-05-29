@@ -1,0 +1,11 @@
+---
+- name: Create SSL certificate directory
+  file:
+    path: /etc/nginx/ssl
+    state: directory
+    mode: '0755'
+
+- name: Generate self-signed SSL certificate
+  command:
+    cmd: openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -subj "/CN=localhost" -keyout /etc/nginx/ssl/nginx.key -out /etc/nginx/ssl/nginx.crt
+    creates: /etc/nginx/ssl/nginx.crt

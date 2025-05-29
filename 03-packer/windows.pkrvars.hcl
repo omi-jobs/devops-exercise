@@ -1,0 +1,5 @@
+region        = "ap-southeast-1"
+ami_name      = "windows-nginx-https-ami-{{timestamp}}"
+instance_type = "t3.micro"
+vpc_id        = "vpc-0710149f4c1fd5084"
+subnet_id     = "subnet-0b2adec304514045d"

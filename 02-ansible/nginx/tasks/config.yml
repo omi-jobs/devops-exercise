@@ -1,0 +1,23 @@
+---
+- name: Configure NGINX with SSL
+  copy:
+    dest: /etc/nginx/conf.d/default.conf
+    content: |
+      server {
+          listen       443 ssl;
+          server_name  localhost;
+
+          ssl_certificate      /etc/nginx/ssl/nginx.crt;
+          ssl_certificate_key  /etc/nginx/ssl/nginx.key;
+
+          location / {
+              root   /usr/share/nginx/html;
+              index  index.html index.htm;
+          }
+      }
+
+- name: Ensure NGINX is started and enabled
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
